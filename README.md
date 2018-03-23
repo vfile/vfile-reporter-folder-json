@@ -1,6 +1,7 @@
 # vfile reporter folder json
 
-[![Build Status](https://travis-ci.org/ChristianMurphy/vfile-reporter-folder-json.svg?branch=master)](https://travis-ci.org/ChristianMurphy/vfile-reporter-folder-json)
+[![Linux Build Status](https://travis-ci.org/ChristianMurphy/vfile-reporter-folder-json.svg?branch=master)](https://travis-ci.org/ChristianMurphy/vfile-reporter-folder-json)
+[![Windows Build status](https://ci.appveyor.com/api/projects/status/wxvxxtwbgkub7tmf/branch/master?svg=true)](https://ci.appveyor.com/project/ChristianMurphy/vfile-reporter-folder-json/branch/master)
 
 > Construct a virtual json folder structure based off the paths of the given vfiles
 
