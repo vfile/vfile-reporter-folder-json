@@ -1,5 +1,7 @@
 # vfile reporter folder json
 
+[![Build Status](https://travis-ci.org/ChristianMurphy/vfile-reporter-folder-json.svg?branch=master)](https://travis-ci.org/ChristianMurphy/vfile-reporter-folder-json)
+
 > Construct a virtual json folder structure based off the paths of the given vfiles
 
 ## Installing
