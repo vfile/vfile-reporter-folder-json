@@ -1,5 +1,6 @@
 const vfile = require("vfile");
 const reporter = require("./vfile-reporter-folder-json");
+const { join } = require("path");
 
 test("folder should have one file", () => {
   const file = vfile({ path: "README.md", contents: "# Hello" });
@@ -11,7 +12,10 @@ test("folder should have one file", () => {
 });
 
 test("sub-folders generate", () => {
-  const file = vfile({ path: "example/README.md", contents: "# Hello" });
+  const file = vfile({
+    path: join("example", "README.md"),
+    contents: "# Hello"
+  });
   const folder = reporter([file], { raw: true });
   expect(folder).toHaveProperty("name", "");
   expect(folder).toHaveProperty("children.0.name", "example");
@@ -19,8 +23,14 @@ test("sub-folders generate", () => {
 });
 
 test("sub-folders to not be duplicated generate", () => {
-  const file = vfile({ path: "example/README.md", contents: "# Hello" });
-  const file2 = vfile({ path: "example/EXAMPLE.md", contents: "# Example" });
+  const file = vfile({
+    path: join("example", "README.md"),
+    contents: "# Hello"
+  });
+  const file2 = vfile({
+    path: join("example", "EXAMPLE.md"),
+    contents: "# Example"
+  });
   const folder = reporter([file, file2], { raw: true });
   expect(folder).toHaveProperty("name", "");
   expect(folder).toHaveProperty("children.0.name", "example");
@@ -29,8 +39,14 @@ test("sub-folders to not be duplicated generate", () => {
 });
 
 test("two sub-folders generate", () => {
-  const file = vfile({ path: "example/README.md", contents: "# Hello" });
-  const file2 = vfile({ path: "example-two/README.md", contents: "# Example" });
+  const file = vfile({
+    path: join("example", "README.md"),
+    contents: "# Hello"
+  });
+  const file2 = vfile({
+    path: join("example-two", "README.md"),
+    contents: "# Example"
+  });
   const folder = reporter([file, file2], { raw: true });
   expect(folder).toHaveProperty("name", "");
   expect(folder).toHaveProperty("children.0.name", "example");
@@ -41,7 +57,7 @@ test("two sub-folders generate", () => {
 
 test("nested folders generate", () => {
   const file = vfile({
-    path: "a/really/long/path/README.md",
+    path: join("a", "really", "long", "path", "README.md"),
     contents: "# Hello"
   });
   const folder = reporter([file], { raw: true });
