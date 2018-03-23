@@ -1,27 +1,76 @@
 {
   "name": "vfile-reporter-folder-json",
   "version": "0.1.0",
-  "description": "Construct a virtual json folder structure based off the paths of the given vfiles",
+  "description":
+    "Construct a virtual json folder structure based off the paths of the given vfiles",
   "main": "vfile-reporter-folder-json.js",
+  "files": ["vfile-reporter-folder-json.js"],
   "scripts": {
-    "test": "jest"
+    "precommit": "lint-staged",
+    "test": "eslint . && jest"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChristianMurphy/vfile-reporter-folder-json.git"
+    "url":
+      "git+https://github.com/ChristianMurphy/vfile-reporter-folder-json.git"
   },
-  "keywords": [
-    "vfile",
-    "folder",
-    "reporter"
-  ],
-  "author": "Christian Murphy",
+  "keywords": ["vfile", "folder", "reporter"],
+  "author": {
+    "name": "Christian Murphy",
+    "email": "Christian.Murphy.42@gmail.com",
+    "url": "https://github.com/ChristianMurphy"
+  },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ChristianMurphy/vfile-reporter-folder-json/issues"
+    "url":
+      "https://github.com/ChristianMurphy/vfile-reporter-folder-json/issues"
   },
-  "homepage": "https://github.com/ChristianMurphy/vfile-reporter-folder-json#readme",
+  "homepage":
+    "https://github.com/ChristianMurphy/vfile-reporter-folder-json#readme",
   "devDependencies": {
+    "husky": "^0.14.3",
     "jest": "^22.4.3"
+  },
+  "dependencies": {
+    "eslint": "^4.19.1",
+    "eslint-plugin-jest": "^21.15.0",
+    "eslint-plugin-node": "^6.0.1",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "node": true
+    },
+    "globals": {
+      "jest/globals": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 2018
+    },
+    "plugins": ["jest", "node"],
+    "extends": [
+      "eslint:recommended",
+      "plugin:jest/recommended",
+      "plugin:node/recommended"
+    ]
+  },
+  "lint-staged": {
+    "*.{js,json,md}": ["prettier --write", "git add"]
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "renovate": {
+    "extends": [
+      "schedule:weekly",
+      "group:all",
+      ":rebaseStalePrs",
+      ":preserveSemverRanges",
+      ":semanticPrefixChore",
+      ":ignoreUnstable",
+      ":renovatePrefix"
+    ]
   }
 }
