@@ -29,7 +29,8 @@
     "https://github.com/ChristianMurphy/vfile-reporter-folder-json#readme",
   "devDependencies": {
     "husky": "^0.14.3",
-    "jest": "^22.4.3"
+    "jest": "^22.4.3",
+    "vfile": "^2.3.0"
   },
   "dependencies": {
     "eslint": "^4.19.1",

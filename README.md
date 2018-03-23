@@ -64,11 +64,11 @@ engine({
 ```json
 {
   "type": "folder",
-  "name": "example",
+  "name": "",
   "children": [
     {
       "type": "file",
-      "path": "example/README.md",
+      "path": "README.md",
       "extname": ".md",
       "basename": "README.md",
       "history": [],
@@ -77,11 +77,11 @@ engine({
     },
     {
       "type": "folder",
-      "name": "subfolder",
+      "name": "example",
       "children": [
         {
           "type": "file",
-          "path": "example/subfolder/README.md",
+          "path": "example/README.md",
           "extname": ".md",
           "basename": "README.md",
           "history": [],

@@ -40,7 +40,7 @@ function addFileOrFolder(folder, { pathList, vFile }) {
  * Returns a Unist compatible JSON tree.
  * With `file` and `folder` nodes
  */
-function vFilesystem(files, { pretty = null, raw = false }) {
+function vFilesystem(files, { pretty = null, raw = false } = {}) {
   const filesystem = files
     .map(vFile => ({ vFile, pathList: vFile.path.split(sep) }))
     .reduce(addFileOrFolder, new vFolder());
@@ -49,7 +49,7 @@ function vFilesystem(files, { pretty = null, raw = false }) {
     return filesystem;
   }
 
-  return filesystem(filesystem, null, pretty);
+  return JSON.stringify(filesystem, null, pretty);
 }
 
 module.exports = vFilesystem;
