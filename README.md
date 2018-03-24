@@ -111,6 +111,6 @@ feedback, help, or just to share it with the world you can do so by creating
 an issue in the [`vfile/ideas`][ideas] repository!
 
 [chat]: https://gitter.im/vfile/Lobby
-[contribute]: contributing.md
-[coc]: code-of-conduct.md
+[contribute]: CONTRIBUTING.md
+[coc]: https://github.com/vfile/vfile/blob/master/code-of-conduct.md
 [ideas]: https://github.com/vfile/ideas
