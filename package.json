@@ -25,16 +25,14 @@
   },
   "homepage": "https://github.com/vfile/vfile-reporter-folder-json#readme",
   "devDependencies": {
-    "husky": "^0.14.3",
-    "jest": "^22.4.3",
-    "vfile": "^2.3.0"
-  },
-  "dependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-jest": "^21.15.0",
     "eslint-plugin-node": "^6.0.1",
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
     "lint-staged": "^7.0.0",
-    "prettier": "^1.11.1"
+    "prettier": "^1.11.1",
+    "vfile": "^2.3.0"
   },
   "eslintConfig": {
     "env": {
