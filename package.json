@@ -11,8 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url":
-      "git+https://github.com/ChristianMurphy/vfile-reporter-folder-json.git"
+    "url": "git+https://github.com/vfile/vfile-reporter-folder-json.git"
   },
   "keywords": ["vfile", "folder", "reporter"],
   "author": {
@@ -22,11 +21,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url":
-      "https://github.com/ChristianMurphy/vfile-reporter-folder-json/issues"
+    "url": "https://github.com/vfile/vfile-reporter-folder-json/issues"
   },
-  "homepage":
-    "https://github.com/ChristianMurphy/vfile-reporter-folder-json#readme",
+  "homepage": "https://github.com/vfile/vfile-reporter-folder-json#readme",
   "devDependencies": {
     "husky": "^0.14.3",
     "jest": "^22.4.3",
