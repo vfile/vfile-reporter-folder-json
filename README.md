@@ -2,7 +2,7 @@
 
 [![NPM Version](https://img.shields.io/npm/v/vfile-reporter-folder-json.svg)](https://www.npmjs.com/package/vfile-reporter-folder-json)
 [![Linux Build Status](https://travis-ci.org/vfile/vfile-reporter-folder-json.svg?branch=master)](https://travis-ci.org/vfile/vfile-reporter-folder-json)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/wxvxxtwbgkub7tmf/branch/master?svg=true)](https://ci.appveyor.com/project/ChristianMurphy/vfile-reporter-folder-json/branch/master)
+[![Windows Build status](https://ci.appveyor.com/api/projects/status/xqjg1cs03g44g2x9/branch/master?svg=true)](https://ci.appveyor.com/project/ChristianMurphy/vfile-reporter-folder-json/branch/master)
 
 > Construct a virtual json folder structure based off the paths of the given vfiles
 
