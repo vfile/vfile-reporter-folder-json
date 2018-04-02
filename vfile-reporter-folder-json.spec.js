@@ -55,6 +55,18 @@ test("two sub-folders generate", () => {
   expect(folder).toHaveProperty("children.1.children.0", file2);
 });
 
+test("folders have path attribute", () => {
+  const file = vfile({
+    path: join("example", "README.md"),
+    contents: "# Hello"
+  });
+  const folder = reporter([file], { raw: true });
+  expect(folder).toHaveProperty("path", "/");
+
+  const subFolder = folder.children.find(vfile => vfile.type === "folder");
+  expect(subFolder).toHaveProperty("path", "/example/");
+});
+
 test("nested folders generate", () => {
   const file = vfile({
     path: join("a", "really", "long", "path", "README.md"),
