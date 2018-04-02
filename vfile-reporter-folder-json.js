@@ -1,11 +1,10 @@
-const path = require("path");
-const sep = path.sep;
+const { join, sep } = require("path");
 
 class vFolder {
   constructor({ name = "", children = [], cwd = "" } = {}) {
     return {
       type: "folder",
-      path: path.join(cwd, name),
+      path: join(cwd, name),
       name,
       children
     };

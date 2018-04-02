@@ -1,7 +1,7 @@
 const vfile = require("vfile");
 const reporter = require("./vfile-reporter-folder-json");
 const path = require("path");
-const join = path.join;
+const { join } = require("path");
 
 test("folder should have one file", () => {
   const file = vfile({ path: "README.md", contents: "# Hello" });
