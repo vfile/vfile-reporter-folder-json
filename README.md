@@ -67,6 +67,7 @@ engine({
 {
   "type": "folder",
   "name": "",
+  "path": ".",
   "children": [
     {
       "type": "file",
@@ -80,6 +81,7 @@ engine({
     {
       "type": "folder",
       "name": "example",
+      "path": "example",
       "children": [
         {
           "type": "file",
@@ -89,6 +91,22 @@ engine({
           "history": [],
           "messages": [],
           "data": {}
+        },
+        {
+          "type": "folder",
+          "name": "two",
+          "path": "example/two",
+          "children": [
+            {
+              "type": "file",
+              "path": "example/two/README.md",
+              "extname": ".md",
+              "basename": "README.md",
+              "history": [],
+              "messages": [],
+              "data": {}
+            }
+          ]
         }
       ]
     }
