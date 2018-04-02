@@ -1,6 +1,7 @@
 const vfile = require("vfile");
 const reporter = require("./vfile-reporter-folder-json");
-const { join } = require("path");
+const path = require("path");
+const join = path.join;
 
 test("folder should have one file", () => {
   const file = vfile({ path: "README.md", contents: "# Hello" });
@@ -57,14 +58,17 @@ test("two sub-folders generate", () => {
 
 test("folders have path attribute", () => {
   const file = vfile({
-    path: join("example", "README.md"),
+    path: join("example", "foo", "README.md"),
     contents: "# Hello"
   });
   const folder = reporter([file], { raw: true });
-  expect(folder).toHaveProperty("path", "/");
+  expect(folder).toHaveProperty("path", ".");
 
   const subFolder = folder.children.find(vfile => vfile.type === "folder");
-  expect(subFolder).toHaveProperty("path", "/example/");
+  expect(subFolder).toHaveProperty("path", path.join("example"));
+
+  const subFolder2 = subFolder.children.find(vfile => vfile.type === "folder");
+  expect(subFolder2).toHaveProperty("path", path.join("example", "foo"));
 });
 
 test("nested folders generate", () => {

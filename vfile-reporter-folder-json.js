@@ -1,10 +1,11 @@
-const { sep } = require("path");
+const path = require("path");
+const sep = path.sep;
 
 class vFolder {
-  constructor({ name = "", children = [], parentPath = "" } = {}) {
+  constructor({ name = "", children = [], cwd = "" } = {}) {
     return {
       type: "folder",
-      path: parentPath + name + "/",
+      path: path.join(cwd, name),
       name,
       children
     };
@@ -26,7 +27,7 @@ function addFileOrFolder(folder, { pathList, vFile }) {
 
   // folder is missing add it
   if (!subFolder) {
-    subFolder = new vFolder({ parentPath: folder.path, name });
+    subFolder = new vFolder({ cwd: folder.path, name });
     folder.children.push(subFolder);
   }
 
