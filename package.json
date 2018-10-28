@@ -1,19 +1,23 @@
 {
   "name": "vfile-reporter-folder-json",
   "version": "2.0.0",
-  "description":
-    "Construct a virtual json folder structure based off the paths of the given vfiles",
+  "description": "Construct a virtual json folder structure based off the paths of the given vfiles",
   "main": "vfile-reporter-folder-json.js",
-  "files": ["vfile-reporter-folder-json.js"],
+  "files": [
+    "vfile-reporter-folder-json.js"
+  ],
   "scripts": {
-    "precommit": "lint-staged",
     "test": "eslint . && jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/vfile/vfile-reporter-folder-json.git"
   },
-  "keywords": ["vfile", "folder", "reporter"],
+  "keywords": [
+    "vfile",
+    "folder",
+    "reporter"
+  ],
   "author": {
     "name": "Christian Murphy",
     "email": "Christian.Murphy.42@gmail.com",
@@ -27,8 +31,8 @@
   "devDependencies": {
     "eslint": "^5.0.0",
     "eslint-plugin-jest": "^21.15.0",
-    "eslint-plugin-node": "^7.0.0",
-    "husky": "^0.14.3",
+    "eslint-plugin-node": "^8.0.0",
+    "husky": "^1.1.2",
     "jest": "^23.0.0",
     "lint-staged": "^7.0.5",
     "prettier": "^1.11.1",
@@ -45,7 +49,10 @@
     "parserOptions": {
       "ecmaVersion": 2018
     },
-    "plugins": ["jest", "node"],
+    "plugins": [
+      "jest",
+      "node"
+    ],
     "extends": [
       "eslint:recommended",
       "plugin:jest/recommended",
@@ -53,7 +60,10 @@
     ]
   },
   "lint-staged": {
-    "*.{js,json,md}": ["prettier --write", "git add"]
+    "*.{js,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "engines": {
     "node": ">=8.0.0"
@@ -68,5 +78,10 @@
       ":ignoreUnstable",
       ":renovatePrefix"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
