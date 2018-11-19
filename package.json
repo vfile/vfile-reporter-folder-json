@@ -30,11 +30,11 @@
   "homepage": "https://github.com/vfile/vfile-reporter-folder-json#readme",
   "devDependencies": {
     "eslint": "^5.0.0",
-    "eslint-plugin-jest": "^21.15.0",
+    "eslint-plugin-jest": "^22.0.0",
     "eslint-plugin-node": "^8.0.0",
     "husky": "^1.1.2",
     "jest": "^23.0.0",
-    "lint-staged": "^7.0.5",
+    "lint-staged": "^8.0.0",
     "prettier": "^1.11.1",
     "vfile": "^3.0.0"
   },
