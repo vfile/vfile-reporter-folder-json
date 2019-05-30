@@ -22,35 +22,30 @@
   "dependencies": {},
   "devDependencies": {
     "eslint": "^5.0.0",
-    "eslint-plugin-jest": "^22.0.0",
     "eslint-plugin-node": "^9.0.0",
     "husky": "^2.0.0",
-    "jest": "^24.0.0",
     "lint-staged": "^8.0.0",
     "prettier": "^1.11.1",
+    "tape": "^4.10.2",
     "vfile": "^4.0.0"
   },
   "scripts": {
-    "test": "eslint . && jest"
+    "test-api": "node test",
+    "test": "eslint . && npm run test-api"
   },
   "eslintConfig": {
     "env": {
       "es6": true,
       "node": true
     },
-    "globals": {
-      "jest/globals": true
-    },
     "parserOptions": {
       "ecmaVersion": 2018
     },
     "plugins": [
-      "jest",
       "node"
     ],
     "extends": [
       "eslint:recommended",
-      "plugin:jest/recommended",
       "plugin:node/recommended"
     ]
   },
