@@ -15,9 +15,8 @@
     "Christian Murphy <Christian.Murphy.42@gmail.com> (https://github.com/ChristianMurphy)",
     "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
   ],
-  "main": "vfile-reporter-folder-json.js",
   "files": [
-    "vfile-reporter-folder-json.js"
+    "index.js"
   ],
   "dependencies": {},
   "devDependencies": {

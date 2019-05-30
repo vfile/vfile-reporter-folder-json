@@ -1,7 +1,7 @@
 const {join} = require('path')
 const test = require('tape')
 const vfile = require('vfile')
-const reporter = require('./vfile-reporter-folder-json')
+const reporter = require('.')
 
 test('default', t => {
   const file = vfile({path: 'readme.md', contents: '# Hello'})
