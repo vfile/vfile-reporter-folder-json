@@ -1,38 +1,46 @@
-# vfile reporter folder json
+# vfile-reporter-folder-json
 
-[![NPM Version](https://img.shields.io/npm/v/vfile-reporter-folder-json.svg)](https://www.npmjs.com/package/vfile-reporter-folder-json)
-[![Linux Build Status](https://travis-ci.org/vfile/vfile-reporter-folder-json.svg?branch=master)](https://travis-ci.org/vfile/vfile-reporter-folder-json)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/xqjg1cs03g44g2x9/branch/master?svg=true)](https://ci.appveyor.com/project/ChristianMurphy/vfile-reporter-folder-json/branch/master)
+[![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
+[![Downloads][downloads-badge]][downloads]
+[![Sponsors][sponsors-badge]][collective]
+[![Backers][backers-badge]][collective]
+[![Chat][chat-badge]][chat]
 
-> Construct a virtual json folder structure based off the paths of the given vfiles
+Construct a virtual JSON folder structure based off the paths of the given
+[vfile][]s.
 
-## Installing
+## Install
+
+[npm][]:
 
 ```sh
-# npm
 npm install vfile-reporter-folder-json
+```
 
-# yarn
+…or [yarn][]:
+
+```sh
 yarn add vfile-reporter-folder-json
 ```
 
 ## Usage
 
-The plugin can be use added via [unified-engine](https://github.com/unifiedjs/unified-engine#options) configuration
+The plugin can be use added via [unified-engine][] configuration:
 
-```json
+```js
 {
-  "reporter": "vfile-reporter-folder-json"
+  reporter: 'vfile-reporter-folder-json'
 }
 ```
 
-or from the terminal with [Unified Args](https://github.com/unifiedjs/unified-args#--report-reporter)
+…or from the terminal with [unified-args][]:
 
 ```sh
 remark . --report vfile-reporter-folder-json
 ```
 
-or programmatically from [unified-engine](https://github.com/unifiedjs/unified-engine#options)
+…or programmatically from [unified-engine][]:
 
 ```js
 const engine = require('unified-engine')
@@ -59,55 +67,66 @@ engine(
 )
 ```
 
-## Options
+## API
 
-- **pretty** - optional - identation to use for printing json, can be a number or `"\t"`
-- **raw** - optional - output raw (un-stringified) json object
+### `vfileReporterFolderJson(files[, options])`
 
-## Output
+Pass a list of [vfile][]s.
 
-```json
+###### `options.pretty`
+
+Indentation to use for printing json, can be a number or `"\t"` (optional).
+
+###### `options.raw`
+
+Output a raw (un-stringified) JSON object (default: `false`).
+
+###### Returns
+
+Virtual JSON folder, such as the following:
+
+```js
 {
-  "type": "folder",
-  "name": "",
-  "path": ".",
-  "children": [
+  type: 'folder',
+  name: '',
+  path: '.',
+  children: [
     {
-      "type": "file",
-      "path": "README.md",
-      "extname": ".md",
-      "basename": "README.md",
-      "history": [],
-      "messages": [],
-      "data": {}
+      type: 'file',
+      path: 'README.md',
+      extname: '.md',
+      basename: 'README.md',
+      history: [],
+      messages: [],
+      data: {}
     },
     {
-      "type": "folder",
-      "name": "example",
-      "path": "example",
-      "children": [
+      type: 'folder',
+      name: 'example',
+      path: 'example',
+      children: [
         {
-          "type": "file",
-          "path": "example/README.md",
-          "extname": ".md",
-          "basename": "README.md",
-          "history": [],
-          "messages": [],
-          "data": {}
+          type: 'file',
+          path: 'example/README.md',
+          extname: '.md',
+          basename: 'README.md',
+          history: [],
+          messages: [],
+          data: {}
         },
         {
-          "type": "folder",
-          "name": "two",
-          "path": "example/two",
-          "children": [
+          type: 'folder',
+          name: 'two',
+          path: 'example/two',
+          children: [
             {
-              "type": "file",
-              "path": "example/two/README.md",
-              "extname": ".md",
-              "basename": "README.md",
-              "history": [],
-              "messages": [],
-              "data": {}
+              type: 'file',
+              path: 'example/two/README.md',
+              extname: '.md',
+              basename: 'README.md',
+              history: [],
+              messages: [],
+              data: {}
             }
           ]
         }
@@ -119,19 +138,58 @@ engine(
 
 ## Contribute
 
-**VFile** is built by people just like you! Check out
-[`contributing.md`][contribute] for ways to get started.
+See [`contributing.md`][contributing] in [`vfile/.github`][health] for ways to
+get started.
+See [`support.md`][support] for ways to get help.
 
-This project has a [Code of Conduct][coc]. By interacting with this repository,
-organisation, or community you agree to abide by its terms.
+This project has a [Code of Conduct][coc].
+By interacting with this repository, organisation, or community you agree to
+abide by its terms.
 
-Want to chat with the community and contributors? Join us in [Gitter][chat]!
+## License
 
-Have an idea for a cool new utility or tool? That’s great! If you want
-feedback, help, or just to share it with the world you can do so by creating
-an issue in the [`vfile/ideas`][ideas] repository!
+[MIT][license] © Christian Murphy
 
-[chat]: https://gitter.im/vfile/Lobby
-[contribute]: CONTRIBUTING.md
-[coc]: https://github.com/vfile/vfile/blob/master/code-of-conduct.md
-[ideas]: https://github.com/vfile/ideas
+<!-- Definitions -->
+
+[build-badge]: https://img.shields.io/travis/vfile/vfile-reporter-folder-json.svg
+
+[build]: https://travis-ci.org/vfile/vfile-reporter-folder-json
+
+[coverage-badge]: https://img.shields.io/codecov/c/github/vfile/vfile-reporter-folder-json.svg
+
+[coverage]: https://codecov.io/github/vfile/vfile-reporter-folder-json
+
+[downloads-badge]: https://img.shields.io/npm/dm/vfile-reporter-folder-json.svg
+
+[downloads]: https://www.npmjs.com/package/vfile-reporter-folder-json
+
+[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
+
+[backers-badge]: https://opencollective.com/unified/backers/badge.svg
+
+[collective]: https://opencollective.com/unified
+
+[chat-badge]: https://img.shields.io/badge/join%20the%20community-on%20spectrum-7b16ff.svg
+
+[chat]: https://spectrum.chat/unified/vfile
+
+[npm]: https://docs.npmjs.com/cli/install
+
+[yarn]: https://yarnpkg.com/en/docs/cli/add
+
+[contributing]: https://github.com/vfile/.github/blob/master/contributing.md
+
+[support]: https://github.com/vfile/.github/blob/master/support.md
+
+[health]: https://github.com/vfile/.github
+
+[coc]: https://github.com/vfile/.github/blob/master/code-of-conduct.md
+
+[license]: license
+
+[vfile]: https://github.com/vfile/vfile
+
+[unified-engine]: https://github.com/unifiedjs/unified-engine#options
+
+[unified-args]: https://github.com/unifiedjs/unified-args#--report-reporter

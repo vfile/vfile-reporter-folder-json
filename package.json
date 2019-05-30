@@ -25,12 +25,14 @@
     "lint-staged": "^8.0.0",
     "nyc": "^14.0.0",
     "prettier": "^1.0.0",
+    "remark-cli": "^6.0.0",
+    "remark-preset-wooorm": "^5.0.0",
     "tape": "^4.0.0",
     "vfile": "^4.0.0",
     "xo": "^0.24.0"
   },
   "scripts": {
-    "format": "prettier --write \"**/*.js\" && xo --fix",
+    "format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
     "test-api": "node test",
     "test-coverage": "nyc --reporter lcov tape test.js",
     "test": "npm run format && npm run test-coverage"
@@ -53,8 +55,13 @@
     "prettier": true,
     "esnext": true
   },
+  "remarkConfig": {
+    "plugins": [
+      "preset-wooorm"
+    ]
+  },
   "lint-staged": {
-    "*.{js,json,md}": [
+    "*.{js,json}": [
       "prettier --write",
       "git add"
     ]
