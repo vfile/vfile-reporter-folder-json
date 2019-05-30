@@ -35,25 +35,28 @@ remark . --report vfile-reporter-folder-json
 or programmatically from [unified-engine](https://github.com/unifiedjs/unified-engine#options)
 
 ```js
-const engine = require('unified-engine');
-const remark = require('remark');
-const folderJson = require('vfile-reporter-folder-json');
+const engine = require('unified-engine')
+const remark = require('remark')
+const folderJson = require('vfile-reporter-folder-json')
 
-engine({
-  // custom reporter
-  reporter: folderJson
-  // standard engine configuration
-  processor: remark,
-  files: ['.'],
-  extensions: ['md', 'markdown', 'mkd', 'mkdn', 'mkdown'],
-  pluginPrefix: 'remark',
-  rcName: '.remarkrc',
-  packageField: 'remarkConfig',
-  ignoreName: '.remarkignore',
-  color: true
-}, function (err) {
-  if (err) throw err;
-});
+engine(
+  {
+    // Custom reporter
+    reporter: folderJson,
+    // Standard engine configuration
+    processor: remark,
+    files: ['.'],
+    extensions: ['md', 'markdown', 'mkd', 'mkdn', 'mkdown'],
+    pluginPrefix: 'remark',
+    rcName: '.remarkrc',
+    packageField: 'remarkConfig',
+    ignoreName: '.remarkignore',
+    color: true
+  },
+  err => {
+    if (err) throw err
+  }
+)
 ```
 
 ## Options
