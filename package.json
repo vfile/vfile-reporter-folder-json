@@ -25,13 +25,21 @@
     "eslint-plugin-node": "^9.0.0",
     "husky": "^2.0.0",
     "lint-staged": "^8.0.0",
+    "nyc": "^14.1.1",
     "prettier": "^1.11.1",
     "tape": "^4.10.2",
     "vfile": "^4.0.0"
   },
   "scripts": {
     "test-api": "node test",
-    "test": "eslint . && npm run test-api"
+    "test-coverage": "nyc --reporter lcov tape test.js",
+    "test": "eslint . && npm run test-coverage"
+  },
+  "nyc": {
+    "check-coverage": true,
+    "lines": 100,
+    "functions": 100,
+    "branches": 100
   },
   "eslintConfig": {
     "env": {
