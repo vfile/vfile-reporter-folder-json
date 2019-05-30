@@ -58,8 +58,8 @@ engine({
 
 ## Options
 
-* **pretty** - optional - identation to use for printing json, can be a number or `"\t"`
-* **raw** - optional - output raw (un-stringified) json object
+- **pretty** - optional - identation to use for printing json, can be a number or `"\t"`
+- **raw** - optional - output raw (un-stringified) json object
 
 ## Output
 
