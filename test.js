@@ -3,6 +3,17 @@ const vfile = require("vfile");
 const reporter = require("./vfile-reporter-folder-json");
 const { join } = require("path");
 
+test("default", t => {
+  const file = vfile({ path: "readme.md", contents: "# Hello" });
+  const folder = reporter([file]);
+
+  t.doesNotThrow(function() {
+    JSON.parse(folder);
+  }, "should return a json stringified result");
+
+  t.end();
+});
+
 test("folder should have one file", t => {
   const file = vfile({ path: "readme.md", contents: "# Hello" });
   const folder = reporter([file], { raw: true });
