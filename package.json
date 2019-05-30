@@ -2,32 +2,24 @@
   "name": "vfile-reporter-folder-json",
   "version": "2.0.0",
   "description": "Construct a virtual json folder structure based off the paths of the given vfiles",
-  "main": "vfile-reporter-folder-json.js",
-  "files": [
-    "vfile-reporter-folder-json.js"
-  ],
-  "scripts": {
-    "test": "eslint . && jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vfile/vfile-reporter-folder-json.git"
-  },
+  "license": "MIT",
   "keywords": [
     "vfile",
     "folder",
     "reporter"
   ],
-  "author": {
-    "name": "Christian Murphy",
-    "email": "Christian.Murphy.42@gmail.com",
-    "url": "https://github.com/ChristianMurphy"
-  },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vfile/vfile-reporter-folder-json/issues"
-  },
-  "homepage": "https://github.com/vfile/vfile-reporter-folder-json#readme",
+  "repository": "vfile/vfile-reporter-folder-json",
+  "bugs": "https://github.com/vfile/vfile-reporter-folder-json/issues",
+  "author": "Christian Murphy <Christian.Murphy.42@gmail.com> (https://github.com/ChristianMurphy)",
+  "contributors": [
+    "Christian Murphy <Christian.Murphy.42@gmail.com> (https://github.com/ChristianMurphy)",
+    "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
+  ],
+  "main": "vfile-reporter-folder-json.js",
+  "files": [
+    "vfile-reporter-folder-json.js"
+  ],
+  "dependencies": {},
   "devDependencies": {
     "eslint": "^5.0.0",
     "eslint-plugin-jest": "^22.0.0",
@@ -37,6 +29,9 @@
     "lint-staged": "^8.0.0",
     "prettier": "^1.11.1",
     "vfile": "^4.0.0"
+  },
+  "scripts": {
+    "test": "eslint . && jest"
   },
   "eslintConfig": {
     "env": {
@@ -64,9 +59,6 @@
       "prettier --write",
       "git add"
     ]
-  },
-  "engines": {
-    "node": ">=8.0.0"
   },
   "renovate": {
     "extends": [
