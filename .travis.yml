@@ -3,5 +3,5 @@ os:
 - windows
 - linux
 node_js:
-- lts/carbon
+- lts/dubnium
 - node
