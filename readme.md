@@ -24,7 +24,7 @@ npm install vfile-reporter-folder-json
 yarn add vfile-reporter-folder-json
 ```
 
-## Usage
+## Use
 
 The plugin can be use added via [unified-engine][] configuration:
 
@@ -75,7 +75,7 @@ Pass a list of [vfile][]s.
 
 ###### `options.pretty`
 
-Indentation to use for printing json, can be a number or `"\t"` (optional).
+Indentation to use for printing json, can be a number or `'\t'` (optional).
 
 ###### `options.raw`
 
@@ -142,8 +142,8 @@ See [`contributing.md`][contributing] in [`vfile/.github`][health] for ways to
 get started.
 See [`support.md`][support] for ways to get help.
 
-This project has a [Code of Conduct][coc].
-By interacting with this repository, organisation, or community you agree to
+This project has a [code of conduct][coc].
+By interacting with this repository, organization, or community you agree to
 abide by its terms.
 
 ## License
@@ -170,7 +170,7 @@ abide by its terms.
 
 [collective]: https://opencollective.com/unified
 
-[chat-badge]: https://img.shields.io/badge/join%20the%20community-on%20spectrum-7b16ff.svg
+[chat-badge]: https://img.shields.io/badge/chat-spectrum-7b16ff.svg
 
 [chat]: https://spectrum.chat/unified/vfile
 
