@@ -1,12 +1,21 @@
 {
   "name": "vfile-reporter-folder-json",
   "version": "2.0.1",
-  "description": "Construct a virtual json folder structure based off the paths of the given vfiles",
+  "description": "vfile utility to create a JSON representation of files",
   "license": "MIT",
   "keywords": [
     "vfile",
+    "vfile-util",
+    "vfile-reporter",
+    "util",
+    "utility",
+    "reporter",
+    "virtual",
+    "file",
+    "formatter",
     "folder",
-    "reporter"
+    "report",
+    "json"
   ],
   "repository": "vfile/vfile-reporter-folder-json",
   "bugs": "https://github.com/vfile/vfile-reporter-folder-json/issues",
