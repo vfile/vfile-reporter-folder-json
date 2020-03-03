@@ -2,12 +2,6 @@ const {join, sep} = require('path')
 
 module.exports = vFilesystem
 
-class VFolder {
-  constructor({name = '', children = [], cwd = ''} = {}) {
-    return {type: 'folder', path: join(cwd, name), name, children}
-  }
-}
-
 // NOTE: this relies on side effects from the children property
 function addFileOrFolder(folder, {pathList, vFile}) {
   // This is where the file goes, add it
@@ -23,7 +17,7 @@ function addFileOrFolder(folder, {pathList, vFile}) {
 
   // Folder is missing add it
   if (!subFolder) {
-    subFolder = new VFolder({cwd: folder.path, name})
+    subFolder = vFolder({cwd: folder.path, name})
     folder.children.push(subFolder)
   }
 
@@ -39,11 +33,15 @@ function addFileOrFolder(folder, {pathList, vFile}) {
 function vFilesystem(files, {pretty = null, raw = false} = {}) {
   const filesystem = files
     .map(vFile => ({vFile, pathList: vFile.path.split(sep)}))
-    .reduce(addFileOrFolder, new VFolder())
+    .reduce(addFileOrFolder, vFolder())
 
   if (raw) {
     return filesystem
   }
 
   return JSON.stringify(filesystem, null, pretty)
+}
+
+function vFolder({name = '', children = [], cwd = ''} = {}) {
+  return {type: 'folder', path: join(cwd, name), name, children}
 }
