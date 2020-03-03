@@ -10,6 +10,10 @@
   ],
   "repository": "vfile/vfile-reporter-folder-json",
   "bugs": "https://github.com/vfile/vfile-reporter-folder-json/issues",
+  "funding": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/unified"
+  },
   "author": "Christian Murphy <Christian.Murphy.42@gmail.com> (https://github.com/ChristianMurphy)",
   "contributors": [
     "Christian Murphy <Christian.Murphy.42@gmail.com> (https://github.com/ChristianMurphy)",
