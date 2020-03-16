@@ -41,7 +41,7 @@
     "remark-preset-wooorm": "^6.0.0",
     "tape": "^4.0.0",
     "vfile": "^4.0.0",
-    "xo": "^0.27.0"
+    "xo": "^0.28.0"
   },
   "scripts": {
     "format": "remark . -qfo && prettier --write \"**/*.js\" && xo --fix",
