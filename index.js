@@ -13,7 +13,7 @@ function addFileOrFolder(folder, {pathList, vFile}) {
 
   // Find sub folder
   const name = pathList.shift()
-  let subFolder = folder.children.find(child => child.name === name)
+  let subFolder = folder.children.find((child) => child.name === name)
 
   // Folder is missing add it
   if (!subFolder) {
@@ -32,7 +32,7 @@ function addFileOrFolder(folder, {pathList, vFile}) {
 // With `file` and `folder` nodes.
 function vFilesystem(files, {pretty = null, raw = false} = {}) {
   const filesystem = files
-    .map(vFile => ({vFile, pathList: vFile.path.split(sep)}))
+    .map((vFile) => ({vFile, pathList: vFile.path.split(sep)}))
     .reduce(addFileOrFolder, vFolder())
 
   if (raw) {
