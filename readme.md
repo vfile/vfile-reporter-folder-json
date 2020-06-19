@@ -178,13 +178,13 @@ abide by its terms.
 
 [yarn]: https://yarnpkg.com/en/docs/cli/add
 
-[contributing]: https://github.com/vfile/.github/blob/master/contributing.md
+[contributing]: https://github.com/vfile/.github/blob/HEAD/contributing.md
 
-[support]: https://github.com/vfile/.github/blob/master/support.md
+[support]: https://github.com/vfile/.github/blob/HEAD/support.md
 
 [health]: https://github.com/vfile/.github
 
-[coc]: https://github.com/vfile/.github/blob/master/code-of-conduct.md
+[coc]: https://github.com/vfile/.github/blob/HEAD/code-of-conduct.md
 
 [license]: license
 
