@@ -1,4 +1,4 @@
-const {join, sep} = require('path')
+const path = require('path')
 
 module.exports = vFilesystem
 
@@ -32,7 +32,7 @@ function addFileOrFolder(folder, {pathList, vFile}) {
 // With `file` and `folder` nodes.
 function vFilesystem(files, {pretty = null, raw = false} = {}) {
   const filesystem = files
-    .map((vFile) => ({vFile, pathList: vFile.path.split(sep)}))
+    .map((vFile) => ({vFile, pathList: vFile.path.split(path.sep)}))
     .reduce(addFileOrFolder, vFolder())
 
   if (raw) {
@@ -43,5 +43,5 @@ function vFilesystem(files, {pretty = null, raw = false} = {}) {
 }
 
 function vFolder({name = '', children = [], cwd = ''} = {}) {
-  return {type: 'folder', path: join(cwd, name), name, children}
+  return {type: 'folder', path: path.join(cwd, name), name, children}
 }
