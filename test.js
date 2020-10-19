@@ -1,4 +1,4 @@
-const {join} = require('path')
+const path = require('path')
 const test = require('tape')
 const vfile = require('vfile')
 const reporter = require('.')
@@ -29,7 +29,7 @@ test('folder should have one file', (t) => {
 
 test('sub-folders generate', (t) => {
   const file = vfile({
-    path: join('example', 'readme.md'),
+    path: path.join('example', 'readme.md'),
     contents: '# Hello'
   })
   const folder = reporter([file], {raw: true})
@@ -44,11 +44,11 @@ test('sub-folders generate', (t) => {
 
 test('sub-folders to not be duplicated generate', (t) => {
   const file = vfile({
-    path: join('example', 'readme.md'),
+    path: path.join('example', 'readme.md'),
     contents: '# Hello'
   })
   const file2 = vfile({
-    path: join('example', 'example.md'),
+    path: path.join('example', 'example.md'),
     contents: '# Example'
   })
   const folder = reporter([file, file2], {raw: true})
@@ -63,11 +63,11 @@ test('sub-folders to not be duplicated generate', (t) => {
 
 test('two sub-folders generate', (t) => {
   const file = vfile({
-    path: join('example', 'readme.md'),
+    path: path.join('example', 'readme.md'),
     contents: '# Hello'
   })
   const file2 = vfile({
-    path: join('example-two', 'readme.md'),
+    path: path.join('example-two', 'readme.md'),
     contents: '# Example'
   })
   const folder = reporter([file, file2], {raw: true})
@@ -87,7 +87,7 @@ test('two sub-folders generate', (t) => {
 
 test('folders have path attribute', (t) => {
   const file = vfile({
-    path: join('example', 'foo', 'readme.md'),
+    path: path.join('example', 'foo', 'readme.md'),
     contents: '# Hello'
   })
 
@@ -98,14 +98,18 @@ test('folders have path attribute', (t) => {
   t.equal(subFolder.path, 'example', 'folder should have a path')
 
   const subFolder2 = subFolder.children.find((vfile) => vfile.type === 'folder')
-  t.equal(subFolder2.path, join('example', 'foo'), 'folder should have a path')
+  t.equal(
+    subFolder2.path,
+    path.join('example', 'foo'),
+    'folder should have a path'
+  )
 
   t.end()
 })
 
 test('nested folders generate', (t) => {
   const file = vfile({
-    path: join('a', 'really', 'long', 'path', 'readme.md'),
+    path: path.join('a', 'really', 'long', 'path', 'readme.md'),
     contents: '# Hello'
   })
   const folder = reporter([file], {raw: true})
