@@ -152,9 +152,9 @@ abide by its terms.
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/vfile/vfile-reporter-folder-json.svg
+[build-badge]: https://github.com/vfile/vfile-reporter-folder-json/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/vfile/vfile-reporter-folder-json
+[build]: https://github.com/vfile/vfile-reporter-folder-json/actions
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/vfile/vfile-reporter-folder-json.svg
 
