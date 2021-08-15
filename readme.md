@@ -1,6 +1,7 @@
 # vfile-reporter-folder-json
 
-Deprecated: Grunt or this package are no longer actively used.
+Deprecated: this package is not actively used to warrant the required
+maintenance.
 
 [Git][] is still intact and previous versions can still be used without warnings.
 
